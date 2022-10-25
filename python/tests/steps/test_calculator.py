@@ -1,12 +1,10 @@
 import pytest
-from pytest_bdd import given, scenario, then, when, parsers
+from pytest_bdd import given, scenario, then, when, parsers, scenarios
 
 from currency_converter.calculator import add
 
 
-@scenario("../features/calculator.feature", "Add two numbers")
-def test_add_two_numbers() -> None:
-    pass
+scenarios("../features/calculator.feature")
 
 
 @given("the first number is 50", target_fixture="context")
@@ -26,11 +24,6 @@ def add_context_numbers(context) -> None:
 @then("the result should be 120")
 def check_if_addition_value_is_120(context) -> None:
     assert context["addition_result"] == 120
-
-
-@scenario("../features/calculator.feature", "Add two numbers with templating")
-def test_add_two_numbers_with_templating() -> None:
-    pass
 
 
 @given(parsers.parse("the first number is: {first_number:d}"), target_fixture="context")
