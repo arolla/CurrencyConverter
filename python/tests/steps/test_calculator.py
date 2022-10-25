@@ -3,10 +3,6 @@ from pytest_bdd import given, scenario, then, when, parsers
 
 from currency_converter.calculator import add
 
-########################################################################################################################
-# How to glue a scenario
-########################################################################################################################
-
 # Arguments: feature file path, scenario name
 @scenario("../features/calculator.feature", "Add two numbers")
 def test_add_two_numbers() -> None:
@@ -31,11 +27,6 @@ def add_context_numbers(context) -> None:
 @then("the result should be 120")
 def check_if_addition_value_is_120(context) -> None:
     assert context["addition_result"] == 120
-
-
-########################################################################################################################
-# How to glue a scenario outline
-########################################################################################################################
 
 
 @scenario("../features/calculator.feature", "Add two numbers with templating")
