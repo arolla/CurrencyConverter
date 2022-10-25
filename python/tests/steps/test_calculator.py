@@ -1,5 +1,4 @@
-import pytest
-from pytest_bdd import given, scenario, then, when, parsers, scenarios
+from pytest_bdd import given, then, when, parsers, scenarios
 
 from currency_converter.calculator import add
 
