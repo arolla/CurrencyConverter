@@ -10,13 +10,12 @@ def test_add_two_numbers() -> None:
 
 
 @given("the first number is 50", target_fixture="context")
-def initialize_first_number_equal_to_50():
-    return {"first_number": 50}
-
-
 @given("the second number is 70")
-def initialize_second_number_equal_to_70(context) -> None:
-    context["second_number"] = 70
+def initialize_first_number_equal_to_50_and_the_second_number_is_equal_to_70():
+    return {
+        "first_number": 50,
+        "second_number": 70,
+    }
 
 
 @when("the two numbers are added")
