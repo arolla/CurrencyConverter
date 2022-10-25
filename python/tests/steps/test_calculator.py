@@ -3,7 +3,7 @@ from pytest_bdd import given, scenario, then, when, parsers
 
 from currency_converter.calculator import add
 
-# Arguments: feature file path, scenario name
+
 @scenario("../features/calculator.feature", "Add two numbers")
 def test_add_two_numbers() -> None:
     pass
@@ -43,7 +43,6 @@ def initialize_second_number(context, second_number) -> None:
     context["second_number"] = second_number
 
 
-# Reuse When step!
 @when("the two numbers are added")
 def add_context_numbers(context) -> None:
     context["addition_result"] = add(context["first_number"], context["second_number"])
