@@ -1,0 +1,7 @@
+.vs/
+bin/
+obj/
+
+CurrencyConverter.Tests/Features/Calculator.feature.cs
+
+TestResults/
