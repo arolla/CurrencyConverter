@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+﻿using Shouldly;
 using TechTalk.SpecFlow;
 
 namespace CurrencyConverter.Tests.Steps
@@ -43,7 +43,7 @@ namespace CurrencyConverter.Tests.Steps
         public void ThenTheResultShouldBe(int result)
         {
             var actualResult = _scenarioContext.Get<int>("result");
-            actualResult.Should().Equals(result);
+            actualResult.ShouldBe(result);
         }
     }
 }
