@@ -1,13 +1,10 @@
 ﻿Feature: Calculator
-![Calculator](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
-Simple calculator for adding **two** numbers
+	In order to learn Math
+	As a regular human
+	I want to add two numbers using Calculator
 
-Link to a feature: [Calculator](CurrencyConverter.Tests/Features/Calculator.feature)
-***Further read***: **[Learn more about how to generate Living Documentation](https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/Generating-Documentation.html)**
-
-@mytag
 Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+	Given I chose 12 as first number
+	And I chose 15 as second number
+	When I press add
+	Then the result should be 27 on the screen
