@@ -1,20 +1,16 @@
-﻿using FluentAssertions;
-using TechTalk.SpecFlow;
-
-namespace CurrencyConverter.Tests.Steps
+namespace CurrencyConverter.Tests.StepDefinitions
 {
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
-
-        // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
-
+        // For additional details on Reqnroll step definitions see https://go.reqnroll.net/doc-stepdef
         private readonly ScenarioContext _scenarioContext;
 
         public CalculatorStepDefinitions(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
         }
+
 
         [Given("the first number is (.*)")]
         public void GivenTheFirstNumberIs(int number)
@@ -40,7 +36,7 @@ namespace CurrencyConverter.Tests.Steps
         public void ThenTheResultShouldBe(int result)
         {
             var actualResult = _scenarioContext.Get<int>("result");
-            actualResult.Should().Equals(result);
+            actualResult.Should().Be(result);
         }
     }
 }
